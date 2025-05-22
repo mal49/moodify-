@@ -27,13 +27,11 @@
     --accent-2: #e879f9;     /* Pinkish-Purple */
     --accent-3: #a855f7;     /* Electric Purple */
     
-    /* Neutrals (for text & backgrounds) */
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-700: #374151;
-    --gray-900: #111827;
+    /* mostly for text */
+    --text-1: #4a3a8a;
+    --text-2: #333333;
+    --text-3: #1a237e;
+    --text-4: #2d3748;
     
     /* Utility Colors */
     --white: #ffffff;
@@ -78,7 +76,6 @@ img {
     max-width: auto;
     display: grid;
     grid-template-columns: 100%;
-    column-gap: 2rem;
     width: calc(100% - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;
@@ -113,7 +110,7 @@ img {
 }
 
 .nav__close, .nav_link, .nav__logo, .nav__toggle {
-    color: var(--white);
+    color: var(--text-1);
 }
 
 .nav__link:hover {
@@ -138,6 +135,7 @@ img {
     height: calc(100vh - var(--header-height));
     grid-template-rows: repeat(2, max-content);
     row-gap: 1.5rem;
+    column-gap: 20rem;
 }
 
 .home__img {
@@ -155,11 +153,13 @@ img {
 }
 
 .home__data {
-    color: var(--white);
+    color: var(--text-1);
 }
 
 .home__data h1 {
     font-family: 'Ribeye', cursive;
+    font-style: italic;
+    letter-spacing: 0.1rem;    
 }
 
 .home__title {
@@ -170,12 +170,15 @@ img {
 
 .home__description {
     margin-bottom: 2.5rem;
+    max-width: 65ch;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .home__button {
     display: inline-block;
     background-color: var(--accent-1);
-    color: var(--white);
+    color: var(--text-1);
     padding: 1.125rem 2rem;
     border-radius: .5rem;
 }
